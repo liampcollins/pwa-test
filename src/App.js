@@ -55,9 +55,13 @@ function App() {
     }
   }, []);
 
+  const params = new URLSearchParams(window.location.search);
+  const sharedUrl = params.get("url");
+
   return (
-    <div className="App">
+    <div className="App" style={{ margin: 100 }}>
       <button onClick={sendNotification}>Send Notification</button>
+      <p>URL{sharedUrl}</p>
     </div>
   );
 }
