@@ -56,7 +56,7 @@ function App() {
   }, []);
 
   const params = new URLSearchParams(window.location.search);
-  console.log("🚀 ~ App ~ window.location:", window.location);
+  console.info("🚀 ~ App ~ window.location:", window.location);
   const sharedUrl = params.get("url");
 
   return (
